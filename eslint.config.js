@@ -1,9 +1,9 @@
 import js from '@eslint/js';
-import globals from 'globals';
+import prettierConfig from 'eslint-config-prettier';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
-import prettierConfig from 'eslint-config-prettier';
 import { defineConfig, globalIgnores } from 'eslint/config';
+import globals from 'globals';
 
 export default defineConfig([
   globalIgnores(['dist']),
@@ -25,6 +25,8 @@ export default defineConfig([
     },
     rules: {
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      // Fix for Loader error
+      'react-refresh/only-export-components': 'off',
     },
   },
   prettierConfig,
