@@ -6,7 +6,7 @@ function getPosition() {
   });
 }
 
-async function fetchAddress() {
+export async function fetchAddress() {
   // 1) We get the user's geolocation position
   const positionObj = await getPosition();
   const position = {

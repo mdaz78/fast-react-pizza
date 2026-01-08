@@ -13,13 +13,11 @@ function Order() {
   const order = useLoaderData();
 
   const {
-    id,
     status,
     priority,
     priorityPrice,
     orderPrice,
     estimatedDelivery,
-    cart,
   } = order;
   const deliveryIn = calcMinutesLeft(estimatedDelivery);
 
