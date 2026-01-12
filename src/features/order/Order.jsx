@@ -2,18 +2,13 @@
 
 import { useLoaderData } from 'react-router-dom';
 import { getOrder } from '../../services/apiRestaurant';
-import {
-  calcMinutesLeft,
-  formatCurrency,
-  formatDate,
-} from '../../utils/helpers';
+import { calcMinutesLeft, formatCurrency, formatDate } from '../../utils/helpers';
 
 function Order() {
   // Everyone can search for all orders, so for privacy reasons we're gonna gonna exclude names or address, these are only for the restaurant staff
   const order = useLoaderData();
 
-  const { status, priority, priorityPrice, orderPrice, estimatedDelivery } =
-    order;
+  const { status, priority, priorityPrice, orderPrice, estimatedDelivery } = order;
   const deliveryIn = calcMinutesLeft(estimatedDelivery);
 
   return (
