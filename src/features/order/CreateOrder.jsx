@@ -43,13 +43,13 @@ function CreateOrder() {
       <Form method="POST">
         <div>
           <label>First Name</label>
-          <input type="text" name="customer" required />
+          <input type="text" name="customer" required className="input" />
         </div>
 
         <div>
           <label>Phone number</label>
           <div>
-            <input type="tel" name="phone" required />
+            <input type="tel" name="phone" required className="input" />
           </div>
           {errors?.phone && <p className="error">{errors.phone}</p>}
         </div>
@@ -57,7 +57,7 @@ function CreateOrder() {
         <div>
           <label>Address</label>
           <div>
-            <input type="text" name="address" required />
+            <input type="text" name="address" required className="input" />
           </div>
         </div>
 
@@ -68,6 +68,7 @@ function CreateOrder() {
             id="priority"
             // value={withPriority}
             // onChange={(e) => setWithPriority(e.target.checked)}
+            className="h-6 w-6 accent-yellow-400 focus:ring-yellow-400 focus:ring-offset-2"
           />
           <label htmlFor="priority">Want to yo give your order priority?</label>
         </div>
