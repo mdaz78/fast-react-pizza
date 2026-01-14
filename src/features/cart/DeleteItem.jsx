@@ -7,7 +7,6 @@ const DeleteItem = ({ pizzaId }) => {
   const dispatch = useDispatch();
 
   const handleDelete = (id) => () => {
-    console.log(id);
     dispatch(deleteItem(id));
   };
 
